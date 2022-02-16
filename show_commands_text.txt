@@ -1,1 +1,3 @@
 show bgp neighbors | begin TCP Socket Information
+show ip route summary
+show version

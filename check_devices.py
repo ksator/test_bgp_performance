@@ -21,3 +21,4 @@ commands = generate_list_from_text_file('show_commands_text.txt')
 # Verify states on the device
 output = load_commands( "10.100.164.113", "admin", "",commands, format = 'text')
 print(output[0]['output'])
+print(output[1]['output'])
