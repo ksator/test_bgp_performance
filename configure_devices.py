@@ -8,8 +8,8 @@ conf = ['enable', 'configure']
 basic = generate_list_from_text_file('device1.cfg')
 
 # configure EOS device1
-device1 = conf + basic
-load_commands("10.100.164.113", "admin", "", device1, format = 'text')
+device1_conf = conf + basic
+load_commands("10.100.164.113", "admin", "", device1_conf, format = 'text')
 
 # BGP conf for device 2
 basic = generate_list_from_text_file('device2.cfg')
@@ -34,5 +34,5 @@ with open('static_routes.cfg', 'w') as file:
 static_routes_list = generate_list_from_text_file('static_routes.cfg')
 
 # configure EOS device2
-device2 = conf + basic + loopback_int_list + static_routes_list
-load_commands("10.100.164.114", "admin", "", device2, format = 'text')
+device2_conf = conf + basic + loopback_int_list + static_routes_list
+load_commands("10.100.164.114", "admin", "", device2_conf, format = 'text')
