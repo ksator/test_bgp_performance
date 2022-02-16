@@ -20,7 +20,7 @@ def generate_list_from_text_file(text_file):
     except:
         return None
 
-def load_commands(hostname, username, password, commands):
+def load_commands(hostname, username, password, commands, format):
     """
     Use EAPI to load commands on an EOS device
     Args:
@@ -28,8 +28,9 @@ def load_commands(hostname, username, password, commands):
         username (string): device username
         password (string): device password
         commands (list): list of EOS commands
+        format (string): json or text
     """
     url = "https://" + username + ":" + password + "@" + hostname + "/command-api"
     switch = Server(url)
-    result=switch.runCmds(version = 1,cmds = commands, autoComplete=True)
+    result=switch.runCmds(version = 1,cmds = commands, autoComplete = True, format = format)
     return result

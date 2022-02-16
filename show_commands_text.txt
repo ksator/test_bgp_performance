@@ -1,0 +1,1 @@
+show bgp neighbors | begin TCP Socket Information
