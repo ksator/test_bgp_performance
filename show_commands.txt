@@ -1,0 +1,2 @@
+show ip bgp summary
+show ip route summary
