@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from functions import generate_list_from_text_file, load_commands
 
 # configure EOS device1
